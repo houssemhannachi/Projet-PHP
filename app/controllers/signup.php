@@ -1,20 +1,21 @@
 <?php 
 
-Class Login extends Controller
+Class Signup extends Controller
 {
 
 	public function index()
 	{
-		$data['page_title'] = "Login";
-		
+
+		$data['page_title'] = "Signup";
+
 		if($_SERVER['REQUEST_METHOD'] == "POST")
 		{
  			
 			$user = $this->load_model("User");
-			$user->login($_POST);
+			$user->signup($_POST);
 		}
 
-		$this->view("login",$data);
+		$this->view("signup",$data);
 	}
 
 

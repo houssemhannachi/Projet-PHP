@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title><?= $data['title_page'] ?> | E-Shopper</title>
+    <title><?= $data['page_title'] ?> | E-Shopper</title>
     <link href="<?= ASSETS . THEME ?>css/bootstrap.min.css" rel="stylesheet">
     <link href="<?= ASSETS . THEME ?>css/font-awesome.min.css" rel="stylesheet">
     <link href="<?= ASSETS . THEME ?>css/prettyPhoto.css" rel="stylesheet">
