@@ -1,3 +1,4 @@
+
 <?php
 
 class App
@@ -11,6 +12,7 @@ class App
 	{
 
 		$url = $this->parseURL();
+		$url[0] = str_replace("-", "_", $url[0]);
 
 		if (file_exists("../app/controllers/" . strtolower($url[0]) . ".php")) {
 
@@ -29,23 +31,16 @@ class App
 			}
 		}
 
-
-		$this->params = (count($url) >= 0) ? $url : ["home"];
+		$this->params = (count($url) > 0) ? $url : ["home"];
 
 		call_user_func_array([$this->controller, $this->method], $this->params); #Appelle la fonction de rappel method fournie avec les paramètres params, rassemblés dans un tableau.
-
 	}
 
 	private function parseURL()
 	{
-		if (!isset($_GET['url'])) {
-			$url = 'home';
-		} else {
-			$url = $_GET['url'];
-		}
+		$url = isset($_GET['url']) ? $_GET['url'] : "home";
 		return explode("/", filter_var(trim($url, "/"), FILTER_SANITIZE_URL));
-		# explode : Scinde une chaîne de caractères en segments(array) seperateur /
-		#trim — Supprime les espaces (ou d'autres caractères) en début et fin de chaîne
-		#filter_var — Filtre une variable avec un filtre spécifique
 	}
-}
+}		# explode : Scinde une chaîne de caractères en segments(array) seperateur /
+#trim — Supprime les espaces (ou d'autres caractères) en début et fin de chaîne
+#filter_var — Filtre une variable avec un filtre spécifique
