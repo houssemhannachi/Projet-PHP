@@ -96,7 +96,7 @@ class User
  		$data['email'] 		= trim($POST['email']);
 		$data['password'] 	= trim($POST['password']);
  
-		if(empty($data['email']) || !preg_match("/^[a-zA-Z_-]+@[a-zA-Z]+.[a-zA-Z]+$/", $data['email']))
+		if(empty($data['email']) )
 		{
 			$this->error .= "Please enter a valid email <br>";
 		}
@@ -141,7 +141,7 @@ class User
 	{
 	}
 
-	public function check_login()
+	public function check_login($redirect = false)
 	{
 
 		$db = Database::getInstance();
@@ -158,6 +158,11 @@ class User
 				{
 					return $result[0];
 				}
+			}
+			if($redirect) {
+				header("Location :" .ROOT."login");
+				die;
+
 			}
 
 			return false;

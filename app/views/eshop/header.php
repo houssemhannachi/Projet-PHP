@@ -7,13 +7,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title><?= $data['page_title'] ?> | E-Shopper</title>
-    <link href="<?= ASSETS . THEME ?>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= ASSETS . THEME ?>css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?= ASSETS . THEME ?>css/prettyPhoto.css" rel="stylesheet">
-    <link href="<?= ASSETS . THEME ?>css/price-range.css" rel="stylesheet">
-    <link href="<?= ASSETS . THEME ?>css/animate.css" rel="stylesheet">
-    <link href="<?= ASSETS . THEME ?>css/main.css" rel="stylesheet">
-    <link href="<?= ASSETS . THEME ?>css/responsive.css" rel="stylesheet">
+    <link href="<?= ASSETS . THEME ?>admin/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="<?= ASSETS . THEME ?>admin/css/style-responsive.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="<?= ASSETS . THEME ?>css/bootstrap.min.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="<?= ASSETS . THEME ?>css/font-awesome.min.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="<?= ASSETS . THEME ?>css/prettyPhoto.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="<?= ASSETS . THEME ?>css/price-range.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="<?= ASSETS . THEME ?>css/animate.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="<?= ASSETS . THEME ?>css/main.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="<?= ASSETS . THEME ?>css/responsive.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="<?= ASSETS . THEME ?>admin/css/bootstrap.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <!--external css-->
+
+    
+    <!-- Custom styles for this template -->
+   
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -96,7 +104,9 @@
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+                                <?php if(isset($data['user_data'])&&$data['user_data']->rank=='customer'):?>
+                                    <li><a href="<?=ROOT?>profile"><i class="fa fa-user"></i> Account</a></li>
+                                <?php endif;?>
                                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                 <li><a href="checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                 <li><a href="cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
