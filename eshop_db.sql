@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 13 déc. 2021 à 01:23
+-- Généré le : lun. 13 déc. 2021 à 16:58
 -- Version du serveur : 10.4.21-MariaDB
 -- Version de PHP : 8.0.10
 
@@ -43,9 +43,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `url_address`, `name`, `email`, `password`, `date`, `rank`) VALUES
 (22, 'iMFSvZ2jqtB2CaArq', 'Houssem Hannachi', 'houssem.hannachi@enis.tn', 'e0c9035898dd52fc65c41454cec9c4d2611bfb37', '2021-12-13 00:39:51', 'admin'),
-(26, 'kVQRjYjDEvn9aN5mKKiEzeRraUqRO', 'Aymen', 'aymen@gmail.com', '0740bf65e24caf84a7c32bd475fd9e7250e84722', '2021-12-13 00:43:25', 'kVQRjYjD'),
-(27, 'iN08Ip8Hra0k15lDYiBmBxOq5LmwdPIlkY9Efh1ew7', 'Karim', 'karim@gmail.com', '0740bf65e24caf84a7c32bd475fd9e7250e84722', '2021-12-13 01:17:06', 'customer'),
-(29, 'P6ZaiNS4', 'Maher', 'maher@hannachi.tn', 'f363ead2b81649d3a36360e98266ba98e787f374', '2021-12-13 01:22:59', 'customer');
+(31, 'BwPjMIGqns1HLszh283iorcPLMDZaze3sHgfuI', 'Rafik Rekhis', 'rafik.rekhis@enis.tn', '7b9f8daacb1809b89a6768740d50a9cbbcc9edea', '2021-12-13 16:01:13', 'customer'),
+(32, 'fiz4ziLD8une6stI34HzvxAsdFyixTwOfHcs7II3VKfzLmiNeMAy6NGtytui', 'Maher Hannachi', 'maher@hannachi.tn', '7b9f8daacb1809b89a6768740d50a9cbbcc9edea', '2021-12-13 16:02:18', 'customer');
 
 --
 -- Index pour les tables déchargées
@@ -70,7 +69,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
