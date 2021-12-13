@@ -56,7 +56,7 @@ Class User
 
 		if($this->error == ""){
 			//save
-			$data['rank'] = $data['url_address']; //customerrrrrrrr!!!!
+			$data['rank'] = 'customer';
 			$data['date'] = date("Y-m-d H:i:s");
 			$data['password'] = hash('sha1',$data['password']);
 
