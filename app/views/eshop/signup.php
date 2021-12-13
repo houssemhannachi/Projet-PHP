@@ -11,8 +11,8 @@
                 
                     <h2>New User Signup!</h2>
                     <form method="POST">
-                        <input name="name" type="text" placeholder="Name" />
-                        <input name="email" type="email" placeholder="Email Address" />
+                        <input name="name" type="text" value="<?= isset($_POST['name']) ? $_POST['name'] : '';?>"placeholder="Name" />
+                        <input name="email" type="email" value="<?= isset($_POST['email']) ? $_POST['email'] : '';?>"placeholder="Email Address" />
                         <input name="password" type="password" placeholder="Password" />
                         <input name="password2" type="password" placeholder="Retype Password" />
                         <span style="font-size:12px;color:red;"><?php check_error() ?></span>
