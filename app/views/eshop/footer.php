@@ -90,8 +90,11 @@
 								<li><a href="#">Online Help</a></li>
 								<li><a href="#">Contact Us</a></li>
 								<li><a href="#">Order Status</a></li>
-								<li><a href="#">Change Location</a></li>
-								<li><a href="#">FAQ’s</a></li>
+								<li><a href="#">XXX</a></li>
+								<?php if(isset($data['user_data']) && $data['user_data']->rank ='admin'):?>
+									
+								<li><a href="<?= ROOT ?>admin">Admin</a></li>
+								<?php endif;?>
 							</ul>
 						</div>
 					</div>
@@ -165,5 +168,5 @@
 	<script src="<?=ASSETS . THEME?>js/price-range.js"></script>
     <script src="<?=ASSETS . THEME?>js/jquery.prettyPhoto.js"></script>
     <script src="<?=ASSETS . THEME?>js/main.js"></script>
-</body>
+</body> 
 </html>
