@@ -11,7 +11,11 @@ class Home extends Controller
             $data['user_data'] = $user_data;
         }
 
+        $db = Database::newInstance();
+        $ROWS = $db->read("SELECT * from products");
+
         $data['page_title'] = 'Home';
+        $data['ROWS'] = $ROWS;
         $this->view("index", $data);
     }
 }
